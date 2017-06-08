@@ -108,7 +108,7 @@ test:
     - unzip -t "$_MT_RUNDIR"/testmap.bin ; exit 0 # just for a crude basic test, maps are not really zip-files!
     - mkdir -p $CIRCLE_ARTIFACTS/maps/
     - cp -v "$_MT_RUNDIR"/testmap.bin $CIRCLE_ARTIFACTS/maps/
-
+    - cp -v "$_MT_RUNDIR"/testmap.bin.idx $CIRCLE_ARTIFACTS/maps/
     # ------ cleanup -------------
     - mkdir $CIRCLE_ARTIFACTS/job_logs
     - mv -v $CIRCLE_ARTIFACTS/stderr_circle_*.txt $CIRCLE_ARTIFACTS/job_logs/ ; exit 0
