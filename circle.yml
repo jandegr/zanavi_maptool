@@ -100,7 +100,7 @@ compile:
 test:
   override:
     - . ~/_bt3; wget http://download.geofabrik.de/europe/belgium-latest.osm.bz2 -O ~/testmap.osm.bz2
-    - . ~/_bt3; cd "$_MT_RUNDIR" ; bzcat ~/testmap.osm.bz2 | "$_MT_BUILDDIR"/navit/maptool/maptool -o runtimes.sqlite -k -n -U -S "$_MT_MEM""000000" testmap.bin
+    - . ~/_bt3; cd "$_MT_RUNDIR" ; bzcat ~/testmap.osm.bz2 | "$_MT_BUILDDIR"/navit/maptool/maptool -o runtimes.sqlite -k -U -S "$_MT_MEM""000000" testmap.bin
     - ls -al "$_MT_RUNDIR"
     - ls -alR "$_MT_RUNDIR"
     - ls -al "$_MT_RUNDIR"/testmap.bin
