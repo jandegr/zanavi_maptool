@@ -67,7 +67,7 @@ dependencies:
 
     - git clone https://github.com/jandegr/zanavi
     #- cd zanavi; git checkout "$ZANAVI_VERSION_HASH"
-    - cd zanavi; git checkout ${CIRCLE_BRANCH}:
+    - cd zanavi; git checkout maptoolcgs:
     - cd zanavi; ls -al
 
     - mkdir -p "$_MT_BUILDDIR"
