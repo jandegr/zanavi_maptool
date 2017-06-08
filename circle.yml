@@ -65,7 +65,7 @@ dependencies:
     - sudo apt-get install qrencode
     - sudo apt-get install automake1.11
 
-    - git clone https://github.com/zoff99/zanavi
+    - git clone https://github.com/jandegr/zanavi
     - cd zanavi; git checkout "$ZANAVI_VERSION_HASH"
     - cd zanavi; ls -al
 
@@ -98,7 +98,7 @@ compile:
     - cd "$_MT_BUILDDIR" ; cd navit/maptool ; ./maptool_linux64_static ; exit 0
 test:
   override:
-    - . ~/_bt3; wget http://download.geofabrik.de/europe/switzerland-latest.osm.bz2 -O ~/testmap.osm.bz2
+    - . ~/_bt3; wget http://download.geofabrik.de/europe/belgium-latest.osm.bz2 -O ~/testmap.osm.bz2
     - . ~/_bt3; cd "$_MT_RUNDIR" ; bzcat ~/testmap.osm.bz2 | "$_MT_BUILDDIR"/navit/maptool/maptool -q -o runtimes.sqlite -k -n -U -S "$_MT_MEM""000000" testmap.bin
     - ls -al "$_MT_RUNDIR"
     - ls -alR "$_MT_RUNDIR"
