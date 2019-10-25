@@ -11,8 +11,8 @@ jobs:
       - run:
           name: checkout code
           command: |
-            sudo apt-get update
-            sudo apt-get install git
+            apt-get update
+            apt-get install git
             git clone https://github.com/jandegr/zanavi
             ls -la
             cd zanavi
