@@ -23,7 +23,7 @@ jobs:
           name: Setup requirements
           command: |
             apt-get install -y g++ gettext libsaxonb-java lib32stdc++6 lib32z1 zip bc
-            apt-get install -y mtools
+            apt-get install -y mtools build-essential
             apt-get install -y autoconf automake1.11
       - run:
           name: Build for Linux
