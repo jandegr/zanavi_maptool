@@ -24,8 +24,8 @@ jobs:
           name: Setup requirements
           command: |
             apt-get install -y g++ gettext libsaxonb-java lib32stdc++6 lib32z1 zip bc
-            apt-get install -y mtools libmagickcore5 perlmagick liblwp-useragent-determined-perl
-            apt-get install autoconf telnet qrencode automake1.11
+            apt-get install -y mtools
+            apt-get install autoconf automake1.11
       - run:
           name: Build for Linux
           command: bash ci/build_linux.sh
