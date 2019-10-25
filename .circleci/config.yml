@@ -23,8 +23,9 @@ jobs:
       - run:
           name: Setup requirements
           command: |
-            bash ci/setup_common_requirements.sh
-            apt-get install -y libpng-dev libfreetype6-dev libdbus-glib-1-dev libgtk2.0-dev curl
+            apt-get install -y libpng12-dev g++ gettext libsaxonb-java lib32stdc++6 lib32z1 zip bc
+            apt-get install -y mtools libmagickcore5 perlmagick liblwp-useragent-determined-perl
+            apt-get install autoconf telnet qrencode automake1.11
       - run:
           name: Build for Linux
           command: bash ci/build_linux.sh
