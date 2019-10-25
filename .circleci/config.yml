@@ -23,23 +23,15 @@ jobs:
       - run:
           name: Setup requirements
           command: |
-            apt-get install -y libpng12-dev g++ gettext libsaxonb-java lib32stdc++6 lib32z1 zip bc
+            apt-get install -y g++ gettext libsaxonb-java lib32stdc++6 lib32z1 zip bc
             apt-get install -y mtools libmagickcore5 perlmagick liblwp-useragent-determined-perl
             apt-get install autoconf telnet qrencode automake1.11
       - run:
           name: Build for Linux
           command: bash ci/build_linux.sh
       - run:
-          name: Get OSM data for France
-          command: wget -c -O france-latest.osm.pbf http://download.geofabrik.de/europe/france-latest.osm.pbf
-          no_output_timeout: 120m
-      - run:
           name: Get OSM data for Belgium
           command: wget -c -O belgium-latest.osm.pbf http://download.geofabrik.de/europe/belgium-latest.osm.pbf
-          no_output_timeout: 120m
-      - run:
-          name: Get OSM data for Luxembourg
-          command: wget -c -O luxembourg-latest.osm.pbf http://download.geofabrik.de/europe/luxembourg-latest.osm.pbf
           no_output_timeout: 120m
       - run:
           name: Setup Osmium
