@@ -30,7 +30,7 @@ jobs:
           command: |
             mkdir builddir
             cd builddir
-            bash ../zanavi/build_maptool.sh
+            bash /home/circleci/code/build_maptool.sh
             ls -la
             cd navit && make && make version.h
       - run:
