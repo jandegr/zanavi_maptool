@@ -8,7 +8,8 @@ jobs:
     environment:
       MAPTOOL_CMD: "bin/navit/maptool/maptool -P  -6 -k"
     steps:
-      - run: install git
+      - run:
+          name: install git
           command: |
             apt-get update -y
             apt-get install -y git
