@@ -8,8 +8,9 @@ jobs:
     environment:
       MAPTOOL_CMD: "bin/navit/maptool/maptool -P  -6 -k"
     steps:
+      - checkout
       - run:
-          name: checkout code
+          name: checkout zanavi code
           command: |
             apt-get update -y
             apt-get install -y git
