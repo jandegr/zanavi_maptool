@@ -30,6 +30,8 @@ jobs:
           command: |
             mkdir builddir
             cd builddir
+            ls -la /home
+            ls -la /home/circleci
             bash /home/circleci/code/build_maptool.sh
             ls -la
             cd navit && make && make version.h
