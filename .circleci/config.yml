@@ -30,7 +30,7 @@ jobs:
           command: |
             mkdir builddir
             cd builddir
-            bash ../zanavi/configure --disable-samplemap --disable-graphics --disable-graphics-gtk-drawing-area --disable-graphics-opengl --disable-svg --disable-svg2png --disable-binding-python --disable-fastmath --disable-gui-gtk --disable-gui-win32 --disable-gui-qml --disable-gui-internal
+            bash ../zanavi/build_maptool.sh
             ls -la
             cd navit && make && make version.h
       - run:
