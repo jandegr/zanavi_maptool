@@ -17,7 +17,7 @@ jobs:
       - run:
           name: checkout zanavi code
           command: |
-            git clone https://github.com/jandegr/zanavi
+            git clone https://github.com/jandegr/zanavi.git
             ls -la
             ls -la zanavi
       - run:
